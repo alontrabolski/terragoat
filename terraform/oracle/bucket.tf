@@ -3,6 +3,7 @@ resource "oci_objectstorage_bucket" "secretsquirrel" {
   # Storage hasn't versioning enabled
   # Storage isn't encrypted with Customer Managed Key
   # Object Storage is Public"
+  
   compartment_id        = oci_identity_compartment.tf-compartment.id
   name                  = "myreallysecretstore"
   namespace             = data.oci_objectstorage_namespace.example.namespace
@@ -21,6 +22,4 @@ resource "oci_objectstorage_bucket" "secretsquirrel" {
     yor_trace            = "a854aa89-5141-4518-a5dc-0ffe3075f209"
   }
 }
-
-
 
